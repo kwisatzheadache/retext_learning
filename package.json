@@ -1,6 +1,6 @@
 {
   "name": "retext_learning",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "learning retext",
   "main": "index.js",
   "scripts": {
@@ -31,9 +31,10 @@
     "retext-smartypants": "^3.0.0",
     "retext-spell": "^2.3.0",
     "retext-usage": "^0.5.0",
-    "retext-profanities": "^4.1.0"
+    "retext-profanities": "^4.1.0",
+    "vfile-reporter": "^3.0.0"
   },
-  "author": "",
+  "author": "kwisatzheadache",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kwisatzheadache/retext_learning/issues"

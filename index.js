@@ -1,11 +1,4 @@
-var unified = require('unified');
-var markdown = require('remark-parse');
-var remark2rehype = require('remark-rehype');
-var document = require('rehype-document');
-var format = require('rehype-format');
-var html = require('rehype-stringify');
 var reporter = require('vfile-reporter');
-
 var retext = require('retext');
 var contractions = require('retext-contractions');
 var diacritics = require('retext-diacritics');
@@ -21,16 +14,6 @@ var spell = require('retext-spell');
 var usage = require('retext-usage');
 var profanities = require('retext-profanities');
 
-// unified()
-//   .use(markdown)
-//   .use(remark2rehype)
-//   .use(document)
-//   .use(format)
-//   .use(html)
-//   .process('# Hello world!', function (err, file) {
-//     console.error(reporter(err || file));
-//     console.log(String(file));
-//   });
 var string = "hey Michael, how's this work for you? It took me quite a while to figure out all of this node stuff. In fact, I still don't feel that that I know it wall that well. Nevertheless, here is a functioning executable. It should be faster learning from here. Heres a few sampels that should give more fuck fuck fuck warnings and set off retext stuffs." 
 retext()
   .use(contractions)
