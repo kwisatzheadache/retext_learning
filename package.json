@@ -30,8 +30,9 @@
     "retext-sentiment": "^4.0.0",
     "retext-smartypants": "^3.0.0",
     "retext-spell": "^2.3.0",
-    "retext-usage": "^0.5.0"
-  }
+    "retext-usage": "^0.5.0",
+    "retext-profanities": "^4.1.0"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
