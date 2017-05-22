@@ -31,7 +31,7 @@ var profanities = require('retext-profanities');
 //     console.error(reporter(err || file));
 //     console.log(String(file));
 //   });
-
+var string = "hey Michael, how's this work for you? It took me quite a while to figure out all of this node stuff. In fact, I still don't feel that that I know it wall that well. Nevertheless, here is a functioning executable. It should be faster learning from here. Heres a few sampels that should give more fuck fuck fuck warnings and set off retext stuffs." 
 retext()
   .use(contractions)
   .use(diacritics)
@@ -46,7 +46,7 @@ retext()
   .use(profanities)
   //.use(spell)
   .use(usage)
-  .process('hello world! how are you guys doing, shit fuck i dont konw?', function (err, file) {
+  .process(string, function (err, file) {
     console.error(reporter(err || file));
     console.log(String(file));
   });
