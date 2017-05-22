@@ -5,12 +5,13 @@ This is where I'm learning how to use node and all that jazz.
 ## Code Example
 
 
-`npm install retext_learning
+````
+npm install retext_learning
 
 npm install
 
 node node_modules/retext_learning/index.js
-`
+````
 
 <!-- ## Motivation -->
 
