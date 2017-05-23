@@ -10,7 +10,9 @@ npm install retext_learning
 
 npm install
 
-node node_modules/retext_learning/index.js
+echo "text you'd like to run through retext" >> text.txt
+
+node node_modules/retext_learning/index.js text.txt
 ````
 
 <!-- ## Motivation -->
