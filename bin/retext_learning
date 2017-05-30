@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const Path = require('path');
+const retext = require('../index');
+const reporter = require('vfile-reporter');
+
+let argv = process.argv.slice(2);
+let inputDir = argv[0];
+
+fs.readdir(getInputPath(inputDir), function(err, files) {
+  if (err) return console.error(err);
+  files.forEach(function(file) {
+    parse(inputDir, file);
+  });
+});
+
+function parse(dir, file) {
+  let inputPath = getInputPath(dir + '/' + file);
+  let outputDir = getOutputPath(dir);
+  let outputPath = getOutputPath(dir + '/' + file.replace('txt', 'json'));
+
+  fs.rmdir(outputDir, function() {
+    fs.mkdir(outputDir, function() {
+      fs.readFile(inputPath, 'utf8', function(err, data) {
+        if (err) return console.error(err);
+        retext(data, function(err, obj) {
+          if (err) return console.error(reporter(err || file));
+          let string = JSON.stringify(obj, null, '  ');
+          fs.writeFile(outputPath, string, 'utf8', function(err) {
+            if (err) return console.error(err);
+            console.log('Wrote ' + outputPath);
+          });
+        });
+      });
+    });
+  });
+}
+
+function getOutputPath(dir) {
+  return Path.normalize(__dirname + '/../var/output/' + dir);
+}
+
+function getInputPath(dir) {
+  return Path.normalize(__dirname + '/../var/input/' + dir);
+}

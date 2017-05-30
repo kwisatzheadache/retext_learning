@@ -5,15 +5,13 @@ This is where I'm learning how to use node and all that jazz.
 ## Code Example
 
 
-````
-npm install retext_learning
-
+```
 npm install
 
 echo "text you'd like to run through retext" >> text.txt
 
-node node_modules/retext_learning/index.js text.txt
-````
+node ./index.js text.txt
+```
 
 <!-- ## Motivation -->
 
@@ -37,4 +35,4 @@ node node_modules/retext_learning/index.js text.txt
 
 ## License
 
-Do I need to put license info here?
+MIT
